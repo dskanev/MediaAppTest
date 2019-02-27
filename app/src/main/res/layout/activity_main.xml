@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@android:color/holo_blue_light"
+    android:background="#000000"
     tools:context=".MainActivity">
 
     <VideoView
@@ -29,7 +29,7 @@
         android:layout_marginRight="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
-        android:background="#876868"
+        android:background="@android:color/holo_blue_light"
         android:text="Play Video"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -42,6 +42,7 @@
         android:layout_marginLeft="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="44dp"
+        android:background="@android:color/holo_blue_light"
         android:text="Pause Music"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btnPlayVideo" />
@@ -53,6 +54,7 @@
         android:layout_marginEnd="16dp"
         android:layout_marginRight="16dp"
         android:layout_marginTop="44dp"
+        android:background="@android:color/holo_blue_light"
         android:text="Play Music"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btnPlayVideo" />
@@ -65,6 +67,7 @@
         android:layout_marginLeft="8dp"
         android:layout_marginRight="8dp"
         android:layout_marginStart="8dp"
+        android:background="@android:color/holo_blue_light"
         app:layout_constraintEnd_toStartOf="@+id/btnPlayMusic"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@+id/btnPauseMusic"
@@ -80,8 +83,38 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="44dp"
         android:text="Change Volume"
+        android:textColor="@android:color/background_light"
         app:layout_constraintEnd_toStartOf="@+id/btnPlayMusic"
         app:layout_constraintHorizontal_bias="0.484"
         app:layout_constraintStart_toEndOf="@+id/btnPauseMusic"
         app:layout_constraintTop_toBottomOf="@+id/btnPlayVideo" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="29dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="Song Progress"
+        android:textColor="@android:color/background_light"
+        app:layout_constraintEnd_toStartOf="@+id/btnPlayMusic"
+        app:layout_constraintStart_toEndOf="@+id/btnPauseMusic"
+        app:layout_constraintTop_toBottomOf="@+id/seekBarVolume" />
+
+    <SeekBar
+        android:id="@+id/seekBarMove"
+        android:layout_width="0dp"
+        android:layout_height="19dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginStart="8dp"
+        android:background="@android:color/holo_blue_light"
+        app:layout_constraintEnd_toStartOf="@+id/btnPlayMusic"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/btnPauseMusic"
+        app:layout_constraintTop_toBottomOf="@+id/textView2" />
 </android.support.constraint.ConstraintLayout>
